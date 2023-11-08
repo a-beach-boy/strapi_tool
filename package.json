@@ -1,0 +1,22 @@
+{
+  "name": "strapi_tool",
+  "version": "1.0.0",
+  "description": "tool to update strapi content",
+  "main": "bin/index.mjs",
+  "scripts": {
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "a-beach-boy",
+  "license": "MIT",
+  "bin": {
+    "strapi-tool": "./bin/index.mjs"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^3.2.0",
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1",
+    "strapi-sdk-js": "^2.3.3",
+    "yargs": "^17.7.2"
+  }
+}
