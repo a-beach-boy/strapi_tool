@@ -4,9 +4,9 @@ import { cli } from "../src/utils/cli.mjs"
 import { getReportFile } from "../src/utils/report.mjs"
 import { getServiceCodex, updateService } from "../src/utils/strapi.mjs"
 
-// const options = cli()
+const options = cli()
 
-// console.log(options.file);
+console.log(options.file);
 
 const config = {
   url: process.env.STRAPI_API_URL,
@@ -15,7 +15,7 @@ const config = {
 
 const strapiCodex = await getServiceCodex(config.url)
 
-const result = getReportFile("site-results-pro-pest")
+const result = getReportFile(options.file)
 result.forEach(site => {
   Object.entries(site).forEach(([key, value]) => {
     if (typeof value === "string" || !strapiCodex[key.substring(1)]) {
